@@ -1,4 +1,4 @@
-// Language content
+// محتوى الترجمات للغات العربية والإنجليزية
 const translations = {
   en: {
     nav_hero: "Home",
@@ -21,10 +21,10 @@ const translations = {
     service_custom_desc: "Unique web tools and solutions developed to fit your business.",
     portfolio_title: "Portfolio",
     contact_title: "Contact Us",
-    contact_name: "Name",
-    contact_email: "Email",
-    contact_message: "Message",
-    contact_send: "Send Message",
+    contact_name: "Your email:",
+    contact_email: "Your email:",
+    contact_message: "Your message:",
+    contact_send: "Send",
     contact_direct: "Direct Contact:"
   },
   ar: {
@@ -48,10 +48,10 @@ const translations = {
     service_custom_desc: "أدوات وحلول رقمية فريدة تناسب عملك.",
     portfolio_title: "الأعمال",
     contact_title: "اتصل بنا",
-    contact_name: "الاسم",
-    contact_email: "البريد الإلكتروني",
-    contact_message: "رسالتك",
-    contact_send: "إرسال الرسالة",
+    contact_name: "البريد الإلكتروني:",
+    contact_email: "البريد الإلكتروني:",
+    contact_message: "رسالتك:",
+    contact_send: "إرسال",
     contact_direct: "للتواصل المباشر:"
   }
 };
@@ -68,7 +68,7 @@ function updateContentLanguage() {
     document.documentElement.dir = 'ltr';
   }
 
-  // Update all elements with data-i18n attribute
+  // تحديث جميع العناصر المعنونة ب data-i18n للغة الحالية
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (translations[currentLang] && translations[currentLang][key]) {
@@ -76,21 +76,22 @@ function updateContentLanguage() {
     }
   });
 
-  // Update nav links for active language
+  // تحديث زر تبديل اللغة
   langToggleBtn.textContent = currentLang === 'en' ? 'ع / EN' : 'EN / ع';
 }
 
-// Toggle language on button click
+// التبديل بين اللغات عند الضغط على الزر
 langToggleBtn.addEventListener('click', () => {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
   updateContentLanguage();
 });
 
-// Initialize content language
+// تهيئة اللغة عند تحميل الصفحة
 updateContentLanguage();
 
-// Contact form submission (optional - placeholder)
+// نموذج الاتصال: التعامل مع إرسال النموذج - عرض رسالة شكر (تذكير: الإرسال الفعلي يتم عبر Formspree)
 document.getElementById('contact-form').addEventListener('submit', (e) => {
+  // منع الإرسال الافتراضي لعرض رسالة شكر فقط
   e.preventDefault();
   alert(currentLang === 'en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
   e.target.reset();
