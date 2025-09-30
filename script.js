@@ -52,26 +52,23 @@ const translations = {
     contact_direct: "للتواصل المباشر:"
   }
 };
-
 let currentLang = 'en';
 
 const langToggleBtn = document.getElementById('lang-toggle');
 
 function updateContentLanguage() {
   document.documentElement.lang = currentLang;
-  if(currentLang === 'ar'){
-    document.documentElement.dir = "rtl";
+  if(currentLang === 'ar') {
+    document.documentElement.dir = 'rtl';
   } else {
-    document.documentElement.dir = "ltr";
+    document.documentElement.dir = 'ltr';
   }
-
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if(translations[currentLang][key]) {
       el.textContent = translations[currentLang][key];
     }
   });
-
   langToggleBtn.textContent = currentLang === 'en' ? 'ع / EN' : 'EN / ع';
 }
 
@@ -82,9 +79,8 @@ langToggleBtn.addEventListener('click', () => {
 
 updateContentLanguage();
 
-// Form submission handler with confirmation
-document.getElementById('contact-form').addEventListener('submit', (event) => {
-  event.preventDefault();
-  alert(currentLang === 'en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
-  event.target.reset();
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert(currentLang==='en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
+  e.target.reset();
 });
