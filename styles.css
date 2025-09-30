@@ -240,16 +240,16 @@ header {
   line-height: 1.4;
 }
 
-/* Image placeholder for portfolio */
-.portfolio-img-placeholder {
-  background: linear-gradient(45deg, #007bff, #00ffff);
+/* Portfolio Images */
+.portfolio-img {
+  width: 100%;
   height: 140px;
+  object-fit: cover;
   border-radius: 8px;
-  filter: brightness(0.75);
-  margin-bottom: 0.75rem;
   transition: filter 0.3s ease;
 }
-.portfolio-card:hover .portfolio-img-placeholder {
+
+.portfolio-card:hover .portfolio-img {
   filter: brightness(1);
 }
 
