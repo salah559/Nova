@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Novaweb Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Tajawal:wght@300;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
-  <meta name="description" content="Novaweb web development group - turning ideas into reality with custom websites and digital solutions."/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Tajawal:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Novaweb is your trusted partner for custom websites, e-commerce, FiveM servers, and more." />
 </head>
 <body>
   <header>
@@ -24,21 +24,21 @@
   </header>
 
   <main>
-    <section id="hero" role="region" aria-label="Hero section">
-      <div class="container">
+    <section id="hero" class="section hero-section">
+      <div class="container hero-content">
         <h1 data-i18n="hero_headline">Turning Ideas into Reality</h1>
         <p data-i18n="hero_description">Novaweb is your trusted partner in crafting stunning websites and digital solutions.</p>
       </div>
     </section>
 
-    <section id="about" role="region" aria-label="About Us">
+    <section id="about" class="section about-section">
       <div class="container">
         <h2 data-i18n="about_title">About Us</h2>
-        <p data-i18n="about_text">Novaweb is a group of passionate web developers specializing in custom websites, e-commerce platforms, FiveM server websites, and tailored web solutions. Our vision is to turn your ideas into exceptional digital realities.</p>
+        <p data-i18n="about_text">Novaweb is a group of passionate web developers specializing in custom websites, e-commerce platforms, FiveM server websites, and tailored web solutions.</p>
       </div>
     </section>
 
-    <section id="services" role="region" aria-label="Services">
+    <section id="services" class="section services-section">
       <div class="container services-grid">
         <article tabindex="0" class="service-card">
           <h3 data-i18n="service_website">Website Development</h3>
@@ -59,37 +59,37 @@
       </div>
     </section>
 
-    <section id="portfolio" role="region" aria-label="Portfolio Projects">
+    <section id="portfolio" class="section portfolio-section">
       <div class="container portfolio-grid">
         <article tabindex="0" class="portfolio-card">
-          <img loading="lazy" src="assets/projects/project1.jpg" alt="Project One" />
+          <img src="assets/projects/project1.jpg" alt="Project One" loading="lazy"/>
           <h3>Project One</h3>
           <p>A sleek website built with the latest web technologies.</p>
         </article>
         <article tabindex="0" class="portfolio-card">
-          <img loading="lazy" src="assets/projects/project2.jpg" alt="Project Two" />
+          <img src="assets/projects/project2.jpg" alt="Project Two" loading="lazy"/>
           <h3>Project Two</h3>
           <p>An e-commerce platform with seamless user experience.</p>
         </article>
         <article tabindex="0" class="portfolio-card">
-          <img loading="lazy" src="assets/projects/project3.jpg" alt="Project Three" />
+          <img src="assets/projects/project3.jpg" alt="Project Three" loading="lazy"/>
           <h3>Project Three</h3>
           <p>FiveM community focused server site with custom features.</p>
         </article>
         <article tabindex="0" class="portfolio-card">
-          <img loading="lazy" src="assets/projects/project4.jpg" alt="Project Four" />
+          <img src="assets/projects/project4.jpg" alt="Project Four" loading="lazy"/>
           <h3>Project Four</h3>
           <p>A specialized web tool tailored for business needs.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" role="region" aria-label="Contact Us">
+    <section id="contact" class="section contact-section">
       <div class="container contact-container">
         <h2 data-i18n="contact_title">Contact Us</h2>
-        <form class="contact-form" action="https://formspree.io/f/mwprolea" method="POST" novalidate id="contact-form">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/mwprolea" method="POST" novalidate>
           <label for="email" data-i18n="contact_name">Your email:</label>
-          <input type="email" id="email" name="email" required aria-required="true" />
+          <input type="email" id="email" name="email" required aria-required="true"/>
           <label for="message" data-i18n="contact_message">Your message:</label>
           <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
           <button type="submit" data-i18n="contact_send">Send</button>
@@ -99,105 +99,17 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-container container">
+  <footer class="footer">
+    <div class="container footer-container">
       <p>© 2025 Novaweb. All rights reserved.</p>
-      <div class="social-links" aria-label="Social media links">
-        <a href="#" aria-label="Discord" title="Discord" tabindex="0" role="link" >
-          <svg width="24" height="24" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C2.533 9.0458 1.873 13.5799 2.298 18.0578a.0824.0824 0 00.0312.0561 19.9006 19.9006 0 006.141 3.1256.0777.0777 0 00.0842-.0276c.474-.651 1.0953-1.504 1.4924-2.1948a.076.076 0 00-.0416-.1057 13.2566 13.2566 0 01-1.872-.8907.077.077 0 01-.0076-.1277c.125-.0943.25-.1923.371-.2914a.0743.0743 0 01.0785-.0105c3.927 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0815.0095c.12.0992.246.1972.372.2914a.0766.0766 0 01-.0064.1276 12.8634 12.8634 0 01-1.873.8914.0766.0766 0 00-.0407.106c.4008.692.9226 1.544 1.494 2.1947a.076.076 0 00.0842.0286 19.876 19.876 0 006.14-3.126.0824.0824 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9554 2.4189-2.1569 2.4189zm7.9748 0c-1.1824 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
-        </a>
-        <a href="#" aria-disabled="true" tabindex="-1" class="social-disabled">Twitter</a>
-        <a href="#" aria-disabled="true" tabindex="-1" class="social-disabled">LinkedIn</a>
+      <div class="social-links" aria-label="Social media">
+        <a href="#" aria-label="Discord" tabindex="0" title="Discord"><svg fill="white" width="24" height="24" viewBox="0 0 24 24"><path d="M20.317 4.37a19.79 19.79 0 00-4.885-1.515.074.074 0 00-.078.037c-.211.375-.445.864-.608 1.25-1.844-.276-3.68-.276-5.487 0-.164-.393-.406-.874-.617-1.25a.077.077 0 00-.078-.037 19.74 19.74 0 00-4.885 1.515.07.07 0 00-.032.028C2.533 9.046 1.873 13.58 2.298 18.058a.082.082 0 00.031.056 19.9 19.9 0 006.14 3.126.078.078 0 00.084-.027c.474-.65 1.095-1.504 1.492-2.195a.076.076 0 00-.042-.106 13.257 13.257 0 01-1.872-.89.077.077 0 01-.007-.128c.125-.094.25-.192.371-.292a.074.074 0 01.079-.01c3.927 1.793 8.18 1.793 12.061 0a.074.074 0 01.081.01c.12.099.246.197.372.292a.077.077 0 01-.006.128 12.863 12.863 0 01-1.872.89.077.077 0 00-.04.106c.4.69.92 1.544 1.49 2.195a.076.076 0 00.083.029 19.88 19.88 0 006.14-3.126.081.081 0 00.031-.055c.5-5.18-.84-9.674-3.548-13.66a.061.061 0 00-.032-.028zM8.02 15.33c-1.18 0-2.16-1.086-2.16-2.42 0-1.333.96-2.419 2.16-2.419 1.21 0 2.18 1.095 2.16 2.419 0 1.333-.95 2.42-2.16 2.42zm7.97 0c-1.18 0-2.16-1.086-2.16-2.42 0-1.333.96-2.419 2.16-2.419 1.21 0 2.18 1.095 2.16 2.419 0 1.333-.95 2.42-2.16 2.42z"/></svg></a>
+        <a href="#" class="social-disabled" tabindex="-1" aria-disabled="true">Twitter</a>
+        <a href="#" class="social-disabled" tabindex="-1" aria-disabled="true">LinkedIn</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    const translations = {
-      en: {
-        nav_hero: "Home",
-        nav_about: "About Us",
-        nav_services: "Services",
-        nav_portfolio: "Portfolio",
-        nav_contact: "Contact",
-        hero_headline: "Turning Ideas into Reality",
-        hero_description: "Novaweb is your trusted partner in crafting stunning websites and digital solutions.",
-        about_title: "About Us",
-        about_text: "Novaweb is a group of passionate web developers specializing in custom websites, e-commerce platforms, FiveM server websites, and tailored web solutions. Our vision is to turn your ideas into exceptional digital realities.",
-        services_title: "Services",
-        service_website: "Website Development",
-        service_website_desc: "Modern, responsive, and fast websites tailored for your needs.",
-        service_ecommerce: "E-commerce Platforms",
-        service_ecommerce_desc: "Robust online stores that drive sales and engagement.",
-        service_fivem: "FiveM Server Websites",
-        service_fivem_desc: "Custom sites designed specifically for FiveM server communities.",
-        service_custom: "Custom Web Solutions",
-        service_custom_desc: "Unique web tools and solutions developed to fit your business.",
-        portfolio_title: "Portfolio",
-        contact_title: "Contact Us",
-        contact_name: "Your email:",
-        contact_message: "Your message:",
-        contact_send: "Send",
-        contact_direct: "Direct Contact:"
-      },
-      ar: {
-        nav_hero: "الرئيسية",
-        nav_about: "من نحن",
-        nav_services: "خدماتنا",
-        nav_portfolio: "الأعمال",
-        nav_contact: "اتصل بنا",
-        hero_headline: "تحويل الأفكار إلى واقع",
-        hero_description: "نوفاوِب شريكك الموثوق لصناعة مواقع إلكترونية وحلول رقمية مميزة.",
-        about_title: "من نحن",
-        about_text: "نوفاوِب عبارة عن مجموعة من مطوري الويب الشغوفين متخصصين في المواقع المخصصة، منصات التجارة الإلكترونية، مواقع خوادم FiveM، والحلول الرقمية المفصلة. رؤيتنا تحويل أفكارك إلى واقع رقمي استثنائي.",
-        services_title: "خدماتنا",
-        service_website: "تطوير المواقع",
-        service_website_desc: "مواقع عصرية، متجاوبة وسريعة مصممة خصيصًا لك.",
-        service_ecommerce: "منصات التجارة الإلكترونية",
-        service_ecommerce_desc: "متاجر إلكترونية قوية تزيد من المبيعات والتفاعل.",
-        service_fivem: "مواقع خوادم FiveM",
-        service_fivem_desc: "مواقع مخصصة لمجتمعات خوادم FiveM.",
-        service_custom: "حلول ويب مخصصة",
-        service_custom_desc: "أدوات وحلول رقمية فريدة تناسب عملك.",
-        portfolio_title: "الأعمال",
-        contact_title: "اتصل بنا",
-        contact_name: "البريد الإلكتروني:",
-        contact_message: "رسالتك:",
-        contact_send: "إرسال",
-        contact_direct: "للتواصل المباشر:"
-      }
-    };
-
-    let currentLang = 'en';
-    const langToggleBtn = document.getElementById('lang-toggle');
-
-    function updateContentLanguage() {
-      document.documentElement.lang = currentLang;
-      if(currentLang === 'ar'){
-        document.documentElement.dir = 'rtl';
-      } else {
-        document.documentElement.dir = 'ltr';
-      }
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[currentLang][key]) {
-          el.textContent = translations[currentLang][key];
-        }
-      });
-      langToggleBtn.textContent = currentLang === 'en' ? 'ع / EN' : 'EN / ع';
-    }
-    langToggleBtn.addEventListener('click', () => {
-      currentLang = currentLang === 'en' ? 'ar' : 'en';
-      updateContentLanguage();
-    });
-    updateContentLanguage();
-
-    // Contact form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert(currentLang === 'en' ? 'Thank you for contacting Novaweb!' : 'شكرًا لتواصلك مع نوفاوِب!');
-      this.reset();
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
