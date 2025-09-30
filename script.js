@@ -1,4 +1,3 @@
-// محتوى الترجمات للغات العربية والإنجليزية
 const translations = {
   en: {
     nav_hero: "Home",
@@ -22,7 +21,6 @@ const translations = {
     portfolio_title: "Portfolio",
     contact_title: "Contact Us",
     contact_name: "Your email:",
-    contact_email: "Your email:",
     contact_message: "Your message:",
     contact_send: "Send",
     contact_direct: "Direct Contact:"
@@ -49,7 +47,6 @@ const translations = {
     portfolio_title: "الأعمال",
     contact_title: "اتصل بنا",
     contact_name: "البريد الإلكتروني:",
-    contact_email: "البريد الإلكتروني:",
     contact_message: "رسالتك:",
     contact_send: "إرسال",
     contact_direct: "للتواصل المباشر:"
@@ -62,37 +59,32 @@ const langToggleBtn = document.getElementById('lang-toggle');
 
 function updateContentLanguage() {
   document.documentElement.lang = currentLang;
-  if (currentLang === 'ar') {
-    document.documentElement.dir = 'rtl';
+  if(currentLang === 'ar'){
+    document.documentElement.dir = "rtl";
   } else {
-    document.documentElement.dir = 'ltr';
+    document.documentElement.dir = "ltr";
   }
 
-  // تحديث جميع العناصر المعنونة ب data-i18n للغة الحالية
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (translations[currentLang] && translations[currentLang][key]) {
+    if(translations[currentLang][key]) {
       el.textContent = translations[currentLang][key];
     }
   });
 
-  // تحديث زر تبديل اللغة
   langToggleBtn.textContent = currentLang === 'en' ? 'ع / EN' : 'EN / ع';
 }
 
-// التبديل بين اللغات عند الضغط على الزر
 langToggleBtn.addEventListener('click', () => {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
   updateContentLanguage();
 });
 
-// تهيئة اللغة عند تحميل الصفحة
 updateContentLanguage();
 
-// نموذج الاتصال: التعامل مع إرسال النموذج - عرض رسالة شكر (تذكير: الإرسال الفعلي يتم عبر Formspree)
-document.getElementById('contact-form').addEventListener('submit', (e) => {
-  // منع الإرسال الافتراضي لعرض رسالة شكر فقط
-  e.preventDefault();
+// Form submission handler with confirmation
+document.getElementById('contact-form').addEventListener('submit', (event) => {
+  event.preventDefault();
   alert(currentLang === 'en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
-  e.target.reset();
+  event.target.reset();
 });
