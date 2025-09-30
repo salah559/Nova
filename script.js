@@ -1,3 +1,4 @@
+// Language content
 const translations = {
   en: {
     nav_hero: "Home",
@@ -20,9 +21,10 @@ const translations = {
     service_custom_desc: "Unique web tools and solutions developed to fit your business.",
     portfolio_title: "Portfolio",
     contact_title: "Contact Us",
-    contact_name: "Your email:",
-    contact_message: "Your message:",
-    contact_send: "Send",
+    contact_name: "Name",
+    contact_email: "Email",
+    contact_message: "Message",
+    contact_send: "Send Message",
     contact_direct: "Direct Contact:"
   },
   ar: {
@@ -46,9 +48,10 @@ const translations = {
     service_custom_desc: "أدوات وحلول رقمية فريدة تناسب عملك.",
     portfolio_title: "الأعمال",
     contact_title: "اتصل بنا",
-    contact_name: "البريد الإلكتروني:",
-    contact_message: "رسالتك:",
-    contact_send: "إرسال",
+    contact_name: "الاسم",
+    contact_email: "البريد الإلكتروني",
+    contact_message: "رسالتك",
+    contact_send: "إرسال الرسالة",
     contact_direct: "للتواصل المباشر:"
   }
 };
@@ -59,29 +62,37 @@ const langToggleBtn = document.getElementById('lang-toggle');
 
 function updateContentLanguage() {
   document.documentElement.lang = currentLang;
-  if(currentLang === 'ar') {
+  if (currentLang === 'ar') {
     document.documentElement.dir = 'rtl';
   } else {
     document.documentElement.dir = 'ltr';
   }
+
+  // Update all elements with data-i18n attribute
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if(translations[currentLang][key]) {
+    if (translations[currentLang] && translations[currentLang][key]) {
       el.textContent = translations[currentLang][key];
     }
   });
+
+  // Update nav links for active language
   langToggleBtn.textContent = currentLang === 'en' ? 'ع / EN' : 'EN / ع';
 }
 
+// Toggle language on button click
 langToggleBtn.addEventListener('click', () => {
   currentLang = currentLang === 'en' ? 'ar' : 'en';
   updateContentLanguage();
 });
 
+// Initialize content language
 updateContentLanguage();
 
+// Contact form submission (optional - placeholder)
 document.getElementById('contact-form').addEventListener('submit', (e) => {
   e.preventDefault();
-  alert(currentLang==='en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
+  alert(currentLang === 'en' ? "Thank you for contacting Novaweb!" : "شكرًا لتواصلك مع نوفاوِب!");
   e.target.reset();
 });
+      
