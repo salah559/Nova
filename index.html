@@ -6,13 +6,14 @@
   <title>Novaweb Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Tajawal:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Novaweb web development group - turning ideas into reality with custom websites and digital solutions." />
 </head>
 <body>
   <header>
     <div class="container header-container">
-      <img src="assets/logo.png" alt="Novaweb Logo" class="logo" />
+      <img src="assets/logo.svg" alt="Novaweb Logo" class="logo" />
       <button id="lang-toggle" aria-label="Toggle Language" class="lang-toggle">ع / EN</button>
-      <nav class="nav-links">
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
         <a href="#hero" class="nav-link" data-i18n="nav_hero">Home</a>
         <a href="#about" class="nav-link" data-i18n="nav_about">About Us</a>
         <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
@@ -23,18 +24,14 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section id="hero" class="section hero-section">
+    <section id="hero" class="section hero-section" role="region" aria-label="Hero section">
       <div class="container hero-content">
         <h1 data-i18n="hero_headline">Turning Ideas into Reality</h1>
-        <p data-i18n="hero_description">
-          Novaweb is your trusted partner in crafting stunning websites and digital solutions.
-        </p>
+        <p data-i18n="hero_description">Novaweb is your trusted partner in crafting stunning websites and digital solutions.</p>
       </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about" class="section about-section">
+    <section id="about" class="section about-section" role="region" aria-label="About Us">
       <div class="container">
         <h2 data-i18n="about_title">About Us</h2>
         <p data-i18n="about_text">
@@ -43,73 +40,70 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="section services-section">
+    <section id="services" class="section services-section" role="region" aria-label="Services">
       <div class="container">
         <h2 data-i18n="services_title">Services</h2>
         <div class="services-grid">
-          <div class="service-card">
+          <article class="service-card" tabindex="0">
             <h3 data-i18n="service_website">Website Development</h3>
             <p data-i18n="service_website_desc">Modern, responsive, and fast websites tailored for your needs.</p>
-          </div>
-          <div class="service-card">
+          </article>
+          <article class="service-card" tabindex="0">
             <h3 data-i18n="service_ecommerce">E-commerce Platforms</h3>
             <p data-i18n="service_ecommerce_desc">Robust online stores that drive sales and engagement.</p>
-          </div>
-          <div class="service-card">
+          </article>
+          <article class="service-card" tabindex="0">
             <h3 data-i18n="service_fivem">FiveM Server Websites</h3>
             <p data-i18n="service_fivem_desc">Custom sites designed specifically for FiveM server communities.</p>
-          </div>
-          <div class="service-card">
+          </article>
+          <article class="service-card" tabindex="0">
             <h3 data-i18n="service_custom">Custom Web Solutions</h3>
             <p data-i18n="service_custom_desc">Unique web tools and solutions developed to fit your business.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio-section">
+    <section id="portfolio" class="section portfolio-section" role="region" aria-label="Portfolio Projects">
       <div class="container">
         <h2 data-i18n="portfolio_title">Portfolio</h2>
         <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <img src="assets/projects/project1.jpg" alt="Project One" class="portfolio-img" />
+          <article class="portfolio-card" tabindex="0">
+            <img loading="lazy" src="assets/projects/project1.webp" alt="Project One" class="portfolio-img" />
             <h3>Project One</h3>
             <p>A sleek website built with the latest web technologies.</p>
-          </div>
-          <div class="portfolio-card">
-            <img src="assets/projects/project2.jpg" alt="Project Two" class="portfolio-img" />
+          </article>
+          <article class="portfolio-card" tabindex="0">
+            <img loading="lazy" src="assets/projects/project2.webp" alt="Project Two" class="portfolio-img" />
             <h3>Project Two</h3>
             <p>An e-commerce platform with seamless user experience.</p>
-          </div>
-          <div class="portfolio-card">
-            <img src="assets/projects/project3.jpg" alt="Project Three" class="portfolio-img" />
+          </article>
+          <article class="portfolio-card" tabindex="0">
+            <img loading="lazy" src="assets/projects/project3.webp" alt="Project Three" class="portfolio-img" />
             <h3>Project Three</h3>
             <p>FiveM community focused server site with custom features.</p>
-          </div>
-          <div class="portfolio-card">
-            <img src="assets/projects/project4.jpg" alt="Project Four" class="portfolio-img" />
+          </article>
+          <article class="portfolio-card" tabindex="0">
+            <img loading="lazy" src="assets/projects/project4.webp" alt="Project Four" class="portfolio-img" />
             <h3>Project Four</h3>
             <p>A specialized web tool tailored for business needs.</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact-section" role="region" aria-label="Contact Us">
       <div class="container contact-container">
         <h2 data-i18n="contact_title">Contact Us</h2>
         <form id="contact-form" class="contact-form" action="https://formspree.io/f/mwprolea" method="POST" novalidate>
           <label for="email" data-i18n="contact_name">Your email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required aria-required="true" />
           <label for="message" data-i18n="contact_message">Your message:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
+          <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
           <button type="submit" data-i18n="contact_send">Send</button>
         </form>
         <div class="direct-contact">
-          <p><strong data-i18n="contact_direct">Direct Contact:</strong> <a href="mailto:silosalah120@gmail.com">silosalah120@gmail.com</a></p>
+          <p><strong data-i18n="contact_direct">Direct Contact:</strong> <a href="mailto:silosalah120@gmail.com" aria-label="Email silosalah120@gmail.com">silosalah120@gmail.com</a></p>
         </div>
       </div>
     </section>
@@ -118,15 +112,16 @@
   <footer>
     <div class="container footer-container">
       <p>© 2025 Novaweb. All rights reserved.</p>
-      <div class="social-links">
-        <a href="#" aria-label="Discord" title="Discord">
+      <div class="social-links" role="list">
+        <a href="#" aria-label="Discord" title="Discord" role="listitem" tabindex="0">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C2.533 9.0458 1.873 13.5799 2.298 18.0578a.0824.0824 0 00.0312.0561 19.9006 19.9006 0 006.141 3.1256.0777.0777 0 00.0842-.0276c.474-.651 1.0953-1.504 1.4924-2.1948a.076.076 0 00-.0416-.1057 13.2566 13.2566 0 01-1.872-.8907.077.077 0 01-.0076-.1277c.125-.0943.25-.1923.371-.2914a.0743.0743 0 01.0785-.0105c3.927 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0815.0095c.12.0992.246.1972.372.2914a.0766.0766 0 01-.0064.1276 12.8634 12.8634 0 01-1.873.8914.0766.0766 0 00-.0407.106c.4008.692.9226 1.544 1.494 2.1947a.076.076 0 00.0842.0286 19.876 19.876 0 006.14-3.126.0824.0824 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9554 2.4189-2.1569 2.4189zm7.9748 0c-1.1824 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
         </a>
-        <a href="#" aria-label="Twitter" title="Twitter" class="social-disabled" tabindex="-1">Twitter</a>
-        <a href="#" aria-label="LinkedIn" title="LinkedIn" class="social-disabled" tabindex="-1">LinkedIn</a>
+        <a href="#" aria-label="Twitter" title="Twitter" class="social-disabled" tabindex="-1" role="listitem">Twitter</a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn" class="social-disabled" tabindex="-1" role="listitem">LinkedIn</a>
       </div>
     </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
